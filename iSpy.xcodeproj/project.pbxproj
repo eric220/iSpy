@@ -15,6 +15,12 @@
 		FA6EFF6F1EC2494500D118DB /* iSpyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EFF6E1EC2494500D118DB /* iSpyTests.swift */; };
 		FA6EFF7A1EC2494500D118DB /* iSpyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EFF791EC2494500D118DB /* iSpyUITests.swift */; };
 		FA6EFF8C1EC249E000D118DB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EFF8B1EC249E000D118DB /* MapViewController.swift */; };
+		FA6EFF8E1EC24D1300D118DB /* TempData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EFF8D1EC24D1300D118DB /* TempData.swift */; };
+		FA6EFF901EC25BBA00D118DB /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EFF8F1EC25BBA00D118DB /* Client.swift */; };
+		FA6EFF921EC25C3300D118DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EFF911EC25C3300D118DB /* LoginViewController.swift */; };
+		FA89896D1ECB9FE8003546C5 /* TargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89896C1ECB9FE8003546C5 /* TargetViewController.swift */; };
+		FA89896F1ECBB35B003546C5 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89896E1ECBB35B003546C5 /* SplitViewController.swift */; };
+		FA8989711ECBB376003546C5 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8989701ECBB376003546C5 /* CaptureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		FA6EFF791EC2494500D118DB /* iSpyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSpyUITests.swift; sourceTree = "<group>"; };
 		FA6EFF7B1EC2494500D118DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA6EFF8B1EC249E000D118DB /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FA6EFF8D1EC24D1300D118DB /* TempData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempData.swift; sourceTree = "<group>"; };
+		FA6EFF8F1EC25BBA00D118DB /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		FA6EFF911EC25C3300D118DB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FA89896C1ECB9FE8003546C5 /* TargetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TargetViewController.swift; path = iSpy/TargetViewController.swift; sourceTree = "<group>"; };
+		FA89896E1ECBB35B003546C5 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplitViewController.swift; path = iSpy/SplitViewController.swift; sourceTree = "<group>"; };
+		FA8989701ECBB376003546C5 /* CaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +146,10 @@
 			isa = PBXGroup;
 			children = (
 				FA6EFF8B1EC249E000D118DB /* MapViewController.swift */,
+				FA6EFF911EC25C3300D118DB /* LoginViewController.swift */,
+				FA89896C1ECB9FE8003546C5 /* TargetViewController.swift */,
+				FA8989701ECBB376003546C5 /* CaptureViewController.swift */,
+				FA89896E1ECBB35B003546C5 /* SplitViewController.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -142,6 +158,8 @@
 		FA6EFF891EC2499C00D118DB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA6EFF8D1EC24D1300D118DB /* TempData.swift */,
+				FA6EFF8F1EC25BBA00D118DB /* Client.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -287,9 +305,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6EFF921EC25C3300D118DB /* LoginViewController.swift in Sources */,
 				FA6EFF5C1EC2494500D118DB /* ViewController.swift in Sources */,
+				FA6EFF8E1EC24D1300D118DB /* TempData.swift in Sources */,
+				FA89896D1ECB9FE8003546C5 /* TargetViewController.swift in Sources */,
+				FA8989711ECBB376003546C5 /* CaptureViewController.swift in Sources */,
 				FA6EFF8C1EC249E000D118DB /* MapViewController.swift in Sources */,
+				FA6EFF901EC25BBA00D118DB /* Client.swift in Sources */,
 				FA6EFF5A1EC2494500D118DB /* AppDelegate.swift in Sources */,
+				FA89896F1ECBB35B003546C5 /* SplitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +558,7 @@
 				FA6EFF801EC2494500D118DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA6EFF811EC2494500D118DB /* Build configuration list for PBXNativeTarget "iSpyTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +567,7 @@
 				FA6EFF831EC2494500D118DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA6EFF841EC2494500D118DB /* Build configuration list for PBXNativeTarget "iSpyUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +576,7 @@
 				FA6EFF861EC2494500D118DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
