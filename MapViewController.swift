@@ -9,10 +9,15 @@
 import Foundation
 import UIKit
 import MapKit
+import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     var loggedIn = true
+    var locationManager = CLLocationManager()
+    let location = (30.696828100000001,-88.045619000000002)
+    
+    
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var toggleButton: UIBarButtonItem!
@@ -21,7 +26,32 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
+        let coordinate = CLLocationCoordinate2D(latitude: location.0, longitude: location.1)
+        centerZoomMap(mapView: mapView, locationPin: coordinate)
         addAnnotations()
+        
+        if (CLLocationManager.locationServicesEnabled()) {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            if ((UIDevice.current.systemVersion as NSString).floatValue >= 8)
+            {
+                locationManager.requestWhenInUseAuthorization()
+            }
+            
+            locationManager.startUpdatingLocation()
+            print(locationManager.location?.coordinate as Any)
+        } else {
+                print("Location services are not enabled");
+        }
+    }
+    
+    func centerZoomMap(mapView: MKMapView, locationPin: CLLocationCoordinate2D?){
+        let mapCenter = locationPin
+        let longitudeDelta = CLLocationDegrees(5.0)
+        let latitudeDelta = CLLocationDegrees(5.0)
+        let span = MKCoordinateSpan(latitudeDelta: latitudeDelta, longitudeDelta: longitudeDelta)
+        let savedRegion = MKCoordinateRegion(center: mapCenter!, span: span)
+        mapView.setRegion(savedRegion, animated: true)
     }
     
     func addAnnotations(){
@@ -77,3 +107,4 @@ extension MapViewController: MKMapViewDelegate {
     }
 
 }
+
